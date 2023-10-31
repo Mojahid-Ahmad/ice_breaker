@@ -8,6 +8,7 @@ langchain = "*"
 black = "*"
 openai = "*"
 python-dotenv = "*"
+google-search-results = "*"
 
 [dev-packages]
 

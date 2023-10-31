@@ -25,10 +25,22 @@ Musk has expressed views that have made him a polarizing figure. He has been cri
 
 if __name__ == "__main__":
     print("Hello LangChain")
-    input_ids = tokenizer.encode("summarize: " + information, return_tensors="pt", max_length=1024, truncation=True)
+    input_ids = tokenizer.encode(
+        "summarize: " + information,
+        return_tensors="pt",
+        max_length=1024,
+        truncation=True,
+    )
 
     # Generate the summary
-    summary_ids = model.generate(input_ids, max_length=150, min_length=40, length_penalty=2.0, num_beams=4, early_stopping=True)
+    summary_ids = model.generate(
+        input_ids,
+        max_length=150,
+        min_length=40,
+        length_penalty=2.0,
+        num_beams=4,
+        early_stopping=True,
+    )
 
     # Decode and print the summary
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
