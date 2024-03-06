@@ -9,8 +9,10 @@ black = "*"
 openai = "*"
 python-dotenv = "*"
 google-search-results = "*"
+tweepy = "*"
 
 [dev-packages]
+ipykernel = "*"
 
 [requires]
 python_version = "3.9"
